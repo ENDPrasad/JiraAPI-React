@@ -6,12 +6,11 @@ const app = express();
 app.use(cors());
 const port = 3002;
 
-const domain = "endprasadcloud";
+const domain = process.env.DOMAIN;
 
 const auth = {
-  username: "e.n.d.prasad@gmail.com",
-  password:
-    "ATATT3xFfGF0h-tsQ0Z0np3NB03fcrjy7e7i7wtEIMvfI__4VXk-pKjd1vCALZrjPU9o0FvZsCg1Ssg6G_1GS5plx61Plbf5yzYvZzm89IEWE1-YBypBRu_DkX7vlmT7dCcCyDa4iEVYIF0SutNqow-tZY8JQdoYo2YFaNlg53KZ6MiiggPIzWM=7DB7AF7D",
+  username: process.env.USER_NAME,
+  password: process.env.PASSWORD,
 };
 
 //Gets all issues in a particular project using the Jira Cloud REST API
